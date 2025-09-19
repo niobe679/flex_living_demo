@@ -33,6 +33,8 @@ import { Layout, Menu } from "antd";
 import {
   BarChartOutlined,
   HomeOutlined,
+  TeamOutlined,
+  UserOutlined, 
 } from "@ant-design/icons";
 import Dashboard from "./pages/Dashboard";
 import PropertyPage from "./pages/PropertyPage";
