@@ -183,7 +183,7 @@ export default function Dashboard() {
                   <TableCell>
                     <Checkbox checked={!!r.approved} onChange={() => toggleApprove(r)} />
                   </TableCell>
-                  <TableCell onClick={() => window.open(`/property/${r.listingId}`, "_blank") } style={{ cursor: 'pointer' }}>{r.listingName}</TableCell>
+                  <TableCell onClick={() => window.open(`/#/property/${r.listingId}`, "_blank") } style={{ cursor: 'pointer' }}>{r.listingName}</TableCell>
                   <TableCell>{r.guestName}</TableCell>
                   <TableCell>{r.rating ?? "—"}</TableCell>
                   <TableCell>{r.publicReview}</TableCell>
