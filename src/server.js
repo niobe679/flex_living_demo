@@ -149,11 +149,11 @@ app.get('/api/listings', async (req, res) => {
 app.get('/api/listing', async (req, res) => {
   try {
     //const { id } = req.params;
-    const { id } = req.query;
+    const { listingId } = req.query;
     const reviews = await ensureDB();
-
+    console.log('Fetching listing for ID:', listingId);
     // find reviews belonging to this listing
-    const listingReviews = reviews.filter(r => r.listingId === id);
+    const listingReviews = reviews.filter(r => r.listingId === listingId);
 
     if (listingReviews.length === 0) {
       return res.status(404).json({ status: 'not_found', message: 'Listing not found' });
