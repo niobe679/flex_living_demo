@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "dev": "vite",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.2",
