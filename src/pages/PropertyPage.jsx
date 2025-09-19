@@ -98,6 +98,7 @@ const PropertyPage = ({ propertyId }) => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const { listingId } = useParams();
+  const baseUrl = process.env.REACT_APP_API_URL;
   const placeholderImg =
   "https://via.placeholder.com/1200x500.png?text=No+Image+Available";
 
@@ -109,12 +110,12 @@ const images = Array.isArray(property?.images) && property.images.length > 0
       try {
         setLoading(true);
         // Fetch property details
-        const propertyJson = await fetch(`http://localhost:4000/api/listings?listingId=${listingId}`)
+        const propertyJson = await fetch(`${baseUrl}/api/listings?listingId=${listingId}`)
         const propertyRes = await propertyJson.json();
         setProperty(propertyRes.data);
         console.log(">> ",propertyRes.data);
         // Fetch reviews for this property
-        const reviewsJson = await fetch(`http://localhost:4000/api/reviews/approved?listingId=${listingId}`);
+        const reviewsJson = await fetch(`${baseUrl}/api/reviews/approved?listingId=${listingId}`);
         const reviewsRes = await reviewsJson.json();
         console.log("pp ",reviewsRes.data);
         setReviews(reviewsRes.data || []);

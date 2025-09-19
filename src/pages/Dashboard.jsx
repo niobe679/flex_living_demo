@@ -35,13 +35,14 @@ export default function Dashboard() {
     sort: "newest",
   });
   const [loading, setLoading] = useState(true);
+  const baseUrl = process.env.REACT_APP_API_URL;
 
   async function load() {
     setLoading(true);
-    const res = await fetch("http://localhost:4000/api/reviews/hostaway");
+    const res = await fetch(`${baseUrl}/api/reviews/hostaway`);
     const json = await res.json();
     setReviews(json.data || []);
-    const listRes = await fetch("http://localhost:4000/api/listings");
+    const listRes = await fetch(`${baseUrl}/api/listings`);
     const listJson = await listRes.json();
     setListings(listJson.data || []);
     setLoading(false);
@@ -52,7 +53,7 @@ export default function Dashboard() {
   }, []);
 
   async function toggleApprove(review) {
-    await fetch("http://localhost:4000/api/reviews/approve", {
+    await fetch(`${baseUrl}/api/reviews/approve`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: review.id, approved: !review.approved }),
