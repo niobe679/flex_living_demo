@@ -35,9 +35,10 @@ export default function Dashboard() {
     sort: "newest",
   });
   const [loading, setLoading] = useState(true);
-  const baseUrl = process.env.REACT_APP_API_URL;
+  const baseUrl = import.meta.env.VITE_API_URL;
 
   async function load() {
+    console.log("Loa ",baseUrl);
     setLoading(true);
     const res = await fetch(`${baseUrl}/api/reviews/hostaway`);
     const json = await res.json();

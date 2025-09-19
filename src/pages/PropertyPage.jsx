@@ -98,7 +98,7 @@ const PropertyPage = ({ propertyId }) => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const { listingId } = useParams();
-  const baseUrl = process.env.REACT_APP_API_URL;
+  const baseUrl = import.meta.env.VITE_API_URL;
   const placeholderImg =
   "https://via.placeholder.com/1200x500.png?text=No+Image+Available";
 
