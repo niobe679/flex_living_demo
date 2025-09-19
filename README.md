@@ -101,16 +101,6 @@ GET /api/reviews/approved?listingId=X
 
 Returns approved reviews for property detail page.
 
-Sandbox Hostaway API
-
-Endpoint: https://sandbox.api.hostaway.com/v1/reviews
-
-Requires both Account ID and API Key.
-
-Behavior: returns paginated reviews.
-
-In case of failure, fallback = mock review dataset.
-
 4. Google Reviews Findings
 
 Explored Feasibility:
