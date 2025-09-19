@@ -4,9 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './App.css';
 import './index.css';
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <Router>
     <App />
-  </BrowserRouter>
+  </Router>
 );
