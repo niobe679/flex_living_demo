@@ -110,10 +110,10 @@ const images = Array.isArray(property?.images) && property.images.length > 0
       try {
         setLoading(true);
         // Fetch property details
-        const propertyJson = await fetch(`${baseUrl}/api/listings?listingId=${listingId}`)
+        const propertyJson = await fetch(`${baseUrl}/api/listing?listingId=${listingId}`)
         const propertyRes = await propertyJson.json();
         setProperty(propertyRes.data);
-        console.log(">> ",propertyRes.data);
+        console.log(">> ",propertyRes);
         // Fetch reviews for this property
         const reviewsJson = await fetch(`${baseUrl}/api/reviews/approved?listingId=${listingId}`);
         const reviewsRes = await reviewsJson.json();
@@ -148,7 +148,7 @@ const images = Array.isArray(property?.images) && property.images.length > 0
               alt={`property-${index}`}
               style={{
                 width: "30%",
-                height: "70px",
+                height: "170px",
                 objectFit: "cover",
                 borderRadius: 8,
               }}

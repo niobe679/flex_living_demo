@@ -56,6 +56,8 @@ export default function App() {
           items={[
             { key: "/", icon: <BarChartOutlined />, label: <Link to="/">Dashboard</Link> },
             { key: "/property", icon: <HomeOutlined />, label: "Properties" },
+            { key: "/users", icon: <TeamOutlined />, label: "Properties" },
+            { key: "/profile", icon: <UserOutlined />, label: "Properties" },
           ]}
         />
       </Sider>

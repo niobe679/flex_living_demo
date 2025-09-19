@@ -21,6 +21,9 @@ import {
   TextField,
   Stack,
 } from "@mui/material";
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, Legend } from "recharts";
 
 export default function Dashboard() {
@@ -158,6 +161,7 @@ export default function Dashboard() {
             value={filters.startDate} onChange={(e) => setFilters({ ...filters, startDate: e.target.value })} />
           <TextField size="small" type="date" label="End Date" InputLabelProps={{ shrink: true }}
             value={filters.endDate} onChange={(e) => setFilters({ ...filters, endDate: e.target.value })} />
+
         </Stack>
       </Paper>
 
