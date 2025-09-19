@@ -1,0 +1,52 @@
+[
+  {
+    "id": 7453,
+    "type": "host-to-guest",
+    "status": "published",
+    "rating": 10,
+    "publicReview": "Shane and family are wonderful! Would definitely host again :)",
+    "categories": [
+      {
+        "category": "cleanliness",
+        "rating": 10
+      },
+      {
+        "category": "communication",
+        "rating": 10
+      },
+      {
+        "category": "respect_house_rules",
+        "rating": 10
+      }
+    ],
+    "submittedAt": "2020-08-21T19:45:14.000Z",
+    "guestName": "Shane Finkelstein",
+    "listingName": "2B N1 A - 29 Shoreditch Heights",
+    "listingId": "2b-n1-a-29-shoreditch-heights",
+    "channel": "hostaway",
+    "approved": true
+  },
+  {
+    "id": 7454,
+    "type": "guest-to-host",
+    "status": "published",
+    "rating": 8,
+    "publicReview": "Nice place, could be cleaner.",
+    "categories": [
+      {
+        "category": "cleanliness",
+        "rating": 6
+      },
+      {
+        "category": "location",
+        "rating": 9
+      }
+    ],
+    "submittedAt": "2021-05-10T07:30:00.000Z",
+    "guestName": "Anna K",
+    "listingName": "2B Hollywood Heights",
+    "listingId": "2b-hollywood-heights",
+    "channel": "hostaway",
+    "approved": true
+  }
+]
